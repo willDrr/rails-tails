@@ -67,4 +67,10 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # setting letter opener gem for development and test
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perfom_deliveries = true
+  # allow binding network vm 
+  config.action_mailer.default_url_options = { host: '0.0.0.0:3000/letter_opener' }
 end

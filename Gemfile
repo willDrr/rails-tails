@@ -81,3 +81,7 @@ gem "tailwindcss-rails", "~> 2.0"
 group :development, :test do
   gem "rspec-rails"
 end
+
+gem "letter_opener", "~> 1.8", :groups => [:development, :test]
+
+gem "hirb", "~> 0.7.3", :groups => [:development, :test]

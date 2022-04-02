@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  get 'home/index'
   devise_for :users
+
   devise_scope :user do
     get '/users/sign_out', to: 'devise/sessions#destroy'
+    get '/user/sign_up', to: 'devise/registrations#new'
   end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "users#index"
+  root 'home#index'
 end

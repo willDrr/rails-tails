@@ -1,4 +1,5 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
+import {toggle} from "el-transition";
 
 // Connects to data-controller="menu"
 export default class extends Controller {
@@ -9,10 +10,10 @@ export default class extends Controller {
   }
 
   toggleDesktopMenu() {
-    this.desktopMenuTarget.classList.toggle("hidden");
+    toggle(this.desktopMenuTarget);
   }
 
   toggleMobileMenu() {
-    this.mobileMenuTarget.classList.toggle("hidden");
+    toggle(this.mobileMenuTarget);
   }
 }
