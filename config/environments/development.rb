@@ -69,8 +69,17 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   # setting letter opener gem for development and test
-  config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.perfom_deliveries = true
-  # allow binding network vm 
-  config.action_mailer.default_url_options = { host: '0.0.0.0:3000/letter_opener' }
+  # config.action_mailer.delivery_method = :mailgun
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.mailgun_settings = {
+  #   api_key: ENV["MAILGUN_API_KEY"],
+  #   domain: ENV["MAILGUN_DOMAIN_NAME"],
+  # }
+
+
+  config.action_mailer.default_url_options ={host: '192.168.56.101', port: 3000}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { address: '0.0.0.0', port: 1025 }
+  config.action_mailer.raise_delivery_errors = true
+
 end

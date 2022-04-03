@@ -85,3 +85,9 @@ end
 gem "letter_opener", "~> 1.8", :groups => [:development, :test]
 
 gem "hirb", "~> 0.7.3", :groups => [:development, :test]
+
+gem "httparty", "~> 0.20.0"
+
+gem "json", "~> 2.6", :groups => [:development, :test]
+
+gem "mailgun_rails", "~> 0.9.0"
