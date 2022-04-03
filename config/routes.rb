@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :rooms
+  resources :room_types
   get 'home/index'
   devise_for :users, controllers: {
     confirmations: 'confirmations'

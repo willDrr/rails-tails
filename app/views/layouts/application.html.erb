@@ -14,11 +14,6 @@
   <body>
     <%= render partial: 'layouts/concerns/navbar' %>
     <main class="container mx-auto mt-28 px-5 flex">
-      <% if notice %>
-        <%= render partial: 'layouts/concerns/confirmation' %>
-      <% else %>
-        <%= alert %>
-      <% end %>
       <%= yield %>
     </main>
   </body>
