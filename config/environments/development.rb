@@ -15,7 +15,10 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   # Enable server timing
-  config.server_timing = true
+  # This throws Nil can't be coerse to nil, to fix this problem
+  # set config.server_timing = false, see:
+  # https://github.com/rails/rails/issues/44167
+  config.server_timing = false
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
