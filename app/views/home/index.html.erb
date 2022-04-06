@@ -6,11 +6,15 @@
      <h1>Welcome <span class="text-blue-600 underline decoration-1 hover:text-red-600"> <%= user_signed_in? ? current_user.email.split("@")[0] : "Stranger" %></span></h1>
     </p>
   </div>
-  <!--
+
   <div class="px-6 pt-4 pb-2">
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
-    </div>
-  -->
+    <!--<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>-->
+    <% if current_user %>
+      <h3><%= current_user.email.split("@")[0]  %></h3>
+      <h3><%= current_user.email %></h3>
+      <%# image_tag(current_user.image) unless current_user.image.nil? %>
+    <% end %>
+  </div>
 </div>

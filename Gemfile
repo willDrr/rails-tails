@@ -91,3 +91,10 @@ gem "httparty", "~> 0.20.0"
 gem "json", "~> 2.6", :groups => [:development, :test]
 
 gem "mailgun_rails", "~> 0.9.0"
+
+# Omniauth gems
+gem 'omniauth-github'
+
+gem 'omniauth-google-oauth2'
+# Prevents Cross-Site Request Forgery on the request phase
+gem "omniauth-rails_csrf_protection"

@@ -85,4 +85,6 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = { address: '0.0.0.0', port: 1025 }
   config.action_mailer.raise_delivery_errors = true
 
+  # Allow ngrok tunnel
+  config.hosts << "7153-201-191-32-85.ngrok.io"
 end
