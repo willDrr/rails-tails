@@ -15,7 +15,7 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   # Enable server timing
-  # This throws Nil can't be coerse to nil, to fix this problem
+  # This throws Nil can't be coerced to Float, to fix this problem
   # set config.server_timing = false, see:
   # https://github.com/rails/rails/issues/44167
   config.server_timing = false

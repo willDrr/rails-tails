@@ -1,0 +1,47 @@
+<div id="<%= dom_id booking %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Booking date:</strong>
+    <%= booking.booking_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Booking time:</strong>
+    <%= booking.booking_time %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Arrival date:</strong>
+    <%= booking.arrival_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Departure date:</strong>
+    <%= booking.departure_date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Num of adults:</strong>
+    <%= booking.num_of_adults %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Num of childrens:</strong>
+    <%= booking.num_of_childrens %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Special request from client:</strong>
+    <%= booking.special_request_from_client %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Room:</strong>
+    <%= booking.room_id %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this booking", booking, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this booking', edit_booking_path(booking), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
