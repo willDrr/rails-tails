@@ -1,7 +1,8 @@
 # Small web application. Playing with Ruby on Rails 7, PG, Tailwindcss, Stimulus.
 Playing with the new adition of Tailwindcss on Ruby on Rails, and the full support
 from Ruby on Rails on StimulusJS.
-![rspec](https://github.com/rubyforgood/abalone/workflows/rspec/badge.svg) ![rubocop](https://github.com/rubyforgood/abalone/workflows/rubocop/badge.svg)
+
+![App hotel CI](https://github.com/willDrr/rails-tails/blob/main/.github/workflows/rubyonrails.ymli/badge.yml)
 
 ## Things to implement
  
