@@ -1,7 +1,7 @@
 <div class="w-full max-w-xs">
   <h2 class="font-semibold text-xl tracking-tight">Log in</h2>
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
     <div class="field">
       <%= f.label :email, class: 'block text-gray-700 text-sm font-bold mb-2' %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>

@@ -2,9 +2,11 @@
 
 class UserMailer < ApplicationMailer
   def send_email
+    api_key = ENV['MAILGUN_API_KEY']
+    domain_name = ENV['MAILGUN_DOMAIN_NAME']
     RestClient.post(
-      "https://api:#{ENV['MAILGUN_API_KEY']}@api.mailgun.net/v3/#{ENV['MAILGUN_DOMAIN_NAME']}/messages",
-      from: "Excited user <mailgun@#{MAILGUN_DOMAIN_NAME}>",
+      "https://api:#{api_key}@api.mailgun.net/v3/#{domain_name}/messages",
+      from: "Excited user <mailgun@#{domain_name}>",
       to: @user.email,
       subject: 'Hello world'
     )
