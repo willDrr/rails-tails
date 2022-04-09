@@ -3,7 +3,7 @@
 require 'mailgun-ruby'
 
 module MailerProvider
-  class MaiGun
+  class MaiGunClient
     def send_email
       mg_client = Mailgun::Client.new ENV['MAILGUN_API_KEY']
 
