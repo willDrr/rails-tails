@@ -2,7 +2,7 @@
 Playing with the new adition of Tailwindcss on Ruby on Rails, and the full support
 from Ruby on Rails on StimulusJS.
 
-![App hotel CI](https://github.com/willDrr/rails-tails/blob/main/.github/workflows/rubyonrails.ymli/badge.yml)
+[![Ruby on Rails CI](https://github.com/willDrr/rails-tails/actions/workflows/rubyonrails.yml/badge.svg?branch=main&event=push)](https://github.com/willDrr/rails-tails/actions/workflows/rubyonrails.yml)
 
 ## Things to implement
  
