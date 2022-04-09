@@ -23,6 +23,8 @@ test:
 
 production:
   <<: *default
+  username: <%= ENV["DB_USER"] %> 
+  password: <%= ENV["APP_DATABASE_PASSWORD"] %>
+  port: <%= ENV["APP_PORT"] %>
   database: apphotel_production
-  username: apphotel
-  password: <%= ENV["APPHOTEL_DATABASE_PASSWORD"] %>
+  
