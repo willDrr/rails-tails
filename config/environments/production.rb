@@ -84,10 +84,9 @@ Rails.application.configure do
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
 
-  # config.action_mailer.default_url_options = { host: '192.168.56.101', port: 3000 }
+  config.action_mailer.default_url_options = { :host => 'ancient-brook-29750.herokuapp.com' }
   config.action_mailer.delivery_method = :mailgun
   config.action_mailer.smtp_settings = { api_key: ENV['MAILGUN_API_KEY'], domain: ENV['MAILGUN_DOMAIN_NAME'] }
-  # config.action_mailer.raise_delivery_errors = true
 
   if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new($stdout)
