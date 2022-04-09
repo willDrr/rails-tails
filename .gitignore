@@ -35,3 +35,5 @@
 
 # ignore dotenv
 .env
+
+todo.md
