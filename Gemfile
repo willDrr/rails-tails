@@ -98,7 +98,7 @@ gem 'httparty', '~> 0.20.0'
 
 gem 'json', '~> 2.6', groups: %i[development test]
 
-gem 'mailgun_rails', '~> 0.9.0'
+gem 'mailgun-ruby', '~>1.2.5'
 
 # Omniauth gems
 gem 'omniauth-github'
