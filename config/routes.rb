@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :bookings
   resources :rooms
   resources :room_types
-  get 'home/index'
+
   devise_for :users, controllers: {
     confirmations: 'confirmations',
     omniauth_callbacks: 'users/omniauth_callbacks'
@@ -15,9 +15,11 @@ Rails.application.routes.draw do
     get '/user/sign_up', to: 'devise/registrations#new'
   end
 
-  resources :home, only: [:index]
-
   resources :dashboard, only: [:index]
 
-  root to: 'home#index'
+  get '/404', to: 'errors#not_found'
+  get '/500', to: 'errors#internal_server'
+  get '/422', to: 'errors#unprocessable'
+
+  root to: 'home#index', as: '/'
 end
