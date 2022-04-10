@@ -10,6 +10,7 @@ window.Stimulus   = application
 
 application.register('popover', Popover)
 application.register('alert', Alert)
+application.register('modal', Modal)
 
 
 export { application }
