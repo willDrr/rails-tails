@@ -1,5 +1,5 @@
 import { Application } from "@hotwired/stimulus"
-import {Popover, Alert} from "tailwindcss-stimulus-components"
+import {Popover, Alert, Modal} from "tailwindcss-stimulus-components"
 
 
 const application = Application.start()
