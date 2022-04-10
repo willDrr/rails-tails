@@ -8,7 +8,26 @@
     <%= link_to 'New booking', new_booking_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
-  <div id="bookings" class="min-w-full">
-    <%= render @bookings %>
+  <br />
+  <hr />
+
+  <div id="bookings">
+    <table class="table-auto min-w-full">
+      <thead>
+        <tr>
+          <th>Booking date</th>
+          <th>Booking time</th>
+          <th>Arrival date</th>
+          <th>Departure date</th>
+          <th>Nums of adults</th>
+          <th>Nums of childrens</th>
+          <th>Special request from client </th>
+          <th>Room</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: 'row_booking', collection: @bookings, as: :booking %>
+      </tbody>
+    </table>
   </div>
 </div>
