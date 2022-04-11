@@ -6,5 +6,6 @@
   <td><%= booking.num_of_adults %></td>
   <td><%= booking.num_of_childrens %></td>
   <td><%= booking.special_request_from_client %></td>
-  <td><%= booking.room_id %></td>
+  <td><%= booking.room.room_type.rooming %></td>
+  <td><%= booking.hotel.hotel_name %></td>
 </tr>
