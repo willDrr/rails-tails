@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class HotelsController < ApplicationController
-  before_action :set_hotel, only: %i[ show edit update destroy ]
+  before_action :set_hotel, only: %i[show edit update destroy]
   before_action :authenticate_user!, only: %i[new edit destroy]
 
   # GET /hotels or /hotels.json
@@ -8,8 +10,7 @@ class HotelsController < ApplicationController
   end
 
   # GET /hotels/1 or /hotels/1.json
-  def show
-  end
+  def show; end
 
   # GET /hotels/new
   def new
@@ -17,8 +18,7 @@ class HotelsController < ApplicationController
   end
 
   # GET /hotels/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /hotels or /hotels.json
   def create
@@ -26,7 +26,7 @@ class HotelsController < ApplicationController
 
     respond_to do |format|
       if @hotel.save
-        format.html { redirect_to hotel_url(@hotel), notice: "Hotel was successfully created." }
+        format.html { redirect_to hotel_url(@hotel), notice: 'Hotel was successfully created.' }
         format.json { render :show, status: :created, location: @hotel }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class HotelsController < ApplicationController
   def update
     respond_to do |format|
       if @hotel.update(hotel_params)
-        format.html { redirect_to hotel_url(@hotel), notice: "Hotel was successfully updated." }
+        format.html { redirect_to hotel_url(@hotel), notice: 'Hotel was successfully updated.' }
         format.json { render :show, status: :ok, location: @hotel }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,19 +53,20 @@ class HotelsController < ApplicationController
     @hotel.destroy
 
     respond_to do |format|
-      format.html { redirect_to hotels_url, notice: "Hotel was successfully destroyed." }
+      format.html { redirect_to hotels_url, notice: 'Hotel was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_hotel
-      @hotel = Hotel.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def hotel_params
-      params.require(:hotel).permit(:hotel_name, :address, :postal_code, :city, :country, :number_of_rooms, :phone_number, :star_rating)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_hotel
+    @hotel = Hotel.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def hotel_params
+    params.require(:hotel).permit(:hotel_name, :address, :postal_code, :city, :country, :number_of_rooms, :phone_number, :star_rating)
+  end
 end

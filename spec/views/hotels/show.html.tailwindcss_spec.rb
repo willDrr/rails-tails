@@ -1,20 +1,22 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "hotels/show", type: :view do
+RSpec.describe 'hotels/show', type: :view do
   before(:each) do
     @hotel = assign(:hotel, Hotel.create!(
-      hotel_name: "Hotel Name",
-      address: "Address",
-      postal_code: "Postal Code",
-      city: "City",
-      country: "Country",
-      number_of_rooms: 2,
-      phone_number: "Phone Number",
-      star_rating: 3
-    ))
+                              hotel_name: 'Hotel Name',
+                              address: 'Address',
+                              postal_code: 'Postal Code',
+                              city: 'City',
+                              country: 'Country',
+                              number_of_rooms: 2,
+                              phone_number: 'Phone Number',
+                              star_rating: 3
+                            ))
   end
 
-  it "renders attributes in <p>" do
+  it 'renders attributes in <p>' do
     render
     expect(rendered).to match(/Hotel Name/)
     expect(rendered).to match(/Address/)

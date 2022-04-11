@@ -22,6 +22,6 @@ Rails.application.routes.draw do
   get '/500', to: 'errors#internal_server'
   get '/422', to: 'errors#unprocessable'
 
-  #root to: 'hotels#index', as: '/'
+  # root to: 'hotels#index', as: '/'
   root to: 'home#index', as: '/'
 end
