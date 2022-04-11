@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :hotels
   resources :bookings
   resources :rooms
   resources :room_types
@@ -21,5 +22,6 @@ Rails.application.routes.draw do
   get '/500', to: 'errors#internal_server'
   get '/422', to: 'errors#unprocessable'
 
+  #root to: 'hotels#index', as: '/'
   root to: 'home#index', as: '/'
 end
