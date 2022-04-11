@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :roles
   resources :hotels
   resources :bookings
   resources :rooms
@@ -16,12 +17,18 @@ Rails.application.routes.draw do
     get '/user/sign_up', to: 'devise/registrations#new'
   end
 
+  devise_for :employees
+
+  devise_scope :employee do
+    get '/employees/sign_out', to: 'employee/sessions#destroy'
+    get '/employee/sign_up', to: 'employee/registrations#new'
+  end
+
   resources :dashboard, only: [:index]
 
   get '/404', to: 'errors#not_found'
   get '/500', to: 'errors#internal_server'
   get '/422', to: 'errors#unprocessable'
 
-  # root to: 'hotels#index', as: '/'
   root to: 'home#index', as: '/'
 end
