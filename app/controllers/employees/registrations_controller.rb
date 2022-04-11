@@ -2,6 +2,10 @@
 
 module Employees
   class RegistrationsController < Devise::RegistrationsController
+    include Accessible
+
+    skip_before_action :check_resource, except: %i[new create]
+
     before_action :configure_sign_up_params, only: %i[create update]
 
     protected
