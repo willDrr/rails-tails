@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-
   private
 
   def configure_devise_params
@@ -12,8 +11,7 @@ class ApplicationController < ActionController::Base
                :gender,
                :phone_number,
                :salary,
-               :role_id, 
-               
+               :role_id,
                :email, :password, :password_confirmation)
     end
     # devise_parameter_sanitizer.for(:account_update) do |u|
