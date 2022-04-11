@@ -17,7 +17,9 @@ Rails.application.routes.draw do
     get '/user/sign_up', to: 'devise/registrations#new'
   end
 
-  devise_for :employees
+  devise_for :employees, controllers: {
+    registrations: 'employees/registrations'
+  }
 
   devise_scope :employee do
     get '/employees/sign_out', to: 'employee/sessions#destroy'
