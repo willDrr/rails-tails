@@ -36,7 +36,12 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Room:</strong>
-    <%= booking.room_id %>
+    <%= booking.room.room_type.rooming %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Hotel:</strong>
+    <%= booking.hotel.hotel_name %>
   </p>
 
   <% if action_name != "show" %>
