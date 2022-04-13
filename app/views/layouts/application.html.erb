@@ -13,9 +13,14 @@
 
   <body>
     <%= render partial: 'layouts/concerns/navbar' %>
-    <main class="container mx-auto mt-28 px-5 flex">
-    <!--<main class="container mx-auto mt-28 px-5 flex">-->
+    <main class="container mx-auto mt-28 px-5">
+      <!--<main class="container mx-auto mt-28 px-5 flex">-->
       <%= yield %>
     </main>
+
+    <br />
+    <br />
+
+    <%= render partial: 'layouts/concerns/footer' %>
   </body>
 </html>
