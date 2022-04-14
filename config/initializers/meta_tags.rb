@@ -37,10 +37,4 @@ MetaTags.configure do |config|
   # config.property_tags.push(
   #   'x-hearthstone:deck',
   # )
-  set_meta_tags site: 'Hotelix'
-  set_meta_tags title: 'Hotelix for local and foreigners visitors'
-  set_meta_tags description: "Hotelix software will take care of the booking
-  for your stay in the country."
-  set_meta_tags keywords: %w[tourism people travel]
-  set_meta_tags author: "Wilder"
 end

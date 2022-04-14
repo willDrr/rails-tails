@@ -356,7 +356,7 @@ DEPENDENCIES
   json (~> 2.6)
   letter_opener (~> 1.8)
   mailgun-ruby (~> 1.2.5)
-  meta-tags (~> 2.16)
+  meta-tags (~> 2.15)
   omniauth-github
   omniauth-google-oauth2
   omniauth-rails_csrf_protection

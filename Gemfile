@@ -107,4 +107,4 @@ gem 'omniauth-google-oauth2'
 # Prevents Cross-Site Request Forgery on the request phase
 gem 'omniauth-rails_csrf_protection'
 
-gem "meta-tags", "~> 2.16"
+gem 'meta-tags', '~> 2.15'
