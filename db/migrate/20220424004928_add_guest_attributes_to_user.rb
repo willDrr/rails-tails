@@ -6,6 +6,7 @@ class AddGuestAttributesToUser < ActiveRecord::Migration[7.0]
     add_column :users, :last_name, :string
     add_column :users, :guest_title, :string
     add_column :users, :date_of_birth, :date
+    add_column :users, :gender, :string
     add_column :users, :phone_number, :string
     add_column :users, :passport_number, :string
     add_column :users, :address, :string
