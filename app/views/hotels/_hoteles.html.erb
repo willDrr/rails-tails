@@ -2,9 +2,11 @@
   <div class="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
   <a href="#">
     <% if hotel.avatar %>
-      <%= image_tag(hotel.avatar) %>
+      <%= image_tag(url_for(hotel.avatar)) %>
+      <%# image_tag(hotel.avatar) %>
     <% else %>
-      <img class="p-8 rounded-t-lg" src="/assets/product-1.png" alt="product image">
+      <%= image_tag(hotel.avatar) %>
+      <!--<img class="p-8 rounded-t-lg" src="/assets/product-1.png" alt="product image">-->
     <% end %>
   </a>
   <div class="px-5 pb-5">
