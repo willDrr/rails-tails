@@ -88,13 +88,13 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'ancient-brook-29750.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :port           => ENV['MAILGUN_SMTP_PORT'],
-    :address        => ENV['MAILGUN_SMTP_SERVER'],
-    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => 'ancient-brook-29750.herokuapp.com', #mydomain actually contains the realvalue
-    :authentication => :plain,
-  } 
+    port: ENV['MAILGUN_SMTP_PORT'],
+    address: ENV['MAILGUN_SMTP_SERVER'],
+    user_name: ENV['MAILGUN_SMTP_LOGIN'],
+    password: ENV['MAILGUN_SMTP_PASSWORD'],
+    domain: 'ancient-brook-29750.herokuapp.com', # mydomain actually contains the realvalue
+    authentication: :plain
+  }
   config.action_mailer.raise_delivery_errors = true
 
   if ENV['RAILS_LOG_TO_STDOUT'].present?
