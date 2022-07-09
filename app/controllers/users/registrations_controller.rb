@@ -8,6 +8,8 @@ module Users
 
     before_action :configure_sign_up_params, only: %i[create update]
 
+    after_action :send_email_notification, only: :create
+
     protected
 
     def configure_sign_up_params
@@ -24,6 +26,14 @@ module Users
                                            city
                                            country
                                          ])
+    end
+  end
+
+  def send_email_notification
+    begin
+      UserMailer.with(resource: @resource).new_comment.deliver_now
+    rescue Exception => e
+      puts "Something went wrong when sending email #{e}"
     end
   end
 end
